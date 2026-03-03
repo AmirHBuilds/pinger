@@ -1,7 +1,8 @@
-# 🚀 Pinger Pro - Advanced Network Monitor
 
-A professional, single-file Python script to monitor server availability and latency. 
-**No installation required. No external libraries.** Just run and ping.
+# 🚀 Pinger - Advanced Network Monitor
+
+A professional, single-file Python script to monitor server availability and latency.
+**Multi-threaded, Cross-platform, and Fully Configurable.**
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg) ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
 
@@ -9,42 +10,21 @@ A professional, single-file Python script to monitor server availability and lat
 
 ## 🇬🇧 English Documentation
 
-### ⚡ Quick Start (One-Line Command)
-You can run the script directly from your terminal without downloading the file manually.
+### 📥 1. Download & Install
+Run the following command in your terminal to download the script and save it as `pinger.py`.
 
 **Linux / macOS (Terminal):**
 ```bash
-curl -sL https://raw.githubusercontent.com/AmirHBuilds/pinger/main/pinger.py | python3
+curl -o pinger.py https://raw.githubusercontent.com/AmirHBuilds/pinger/refs/heads/main/pinger.py
 ```
 
 **Windows (PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/AmirHBuilds/pinger/main/pinger.py | python
+iwr -Uri https://raw.githubusercontent.com/AmirHBuilds/pinger/refs/heads/main/pinger.py -OutFile pinger.py
 ```
 
----
-
-### 📥 Manual Usage (Copy & Paste)
-If you prefer to save the script or edit the server list:
-
-1.  **Download:**
-    *   Copy the code from [pinger.py](https://github.com/AmirHBuilds/pinger/blob/main/pinger.py).
-    *   Paste it into a file named `pinger.py` on your server or computer.
-
-2.  **Run:**
-    Open your terminal/command prompt in the folder where you saved the file.
-
-    *   **Windows:**
-        ```bash
-        python pinger.py
-        ```
-    *   **Linux / macOS:**
-        ```bash
-        python3 pinger.py
-        ```
-
-### ⚙️ Configuration
-To add your own servers, open `pinger.py` with any text editor (Notepad, nano, vim) and edit the `SERVER_GROUPS` dictionary at the top of the file:
+### ⚙️ 2. Configuration (Optional)
+To add your own servers or change the groups, simply open `pinger.py` with any text editor (like `nano`, `vim`, `notepad`) and edit the `SERVER_GROUPS` section at the top:
 
 ```python
 SERVER_GROUPS = {
@@ -55,43 +35,55 @@ SERVER_GROUPS = {
 }
 ```
 
+### 🚀 3. How to Run
+Once downloaded, you can run the script anytime using Python:
+
+*   **Linux / macOS:**
+    ```bash
+    python3 pinger.py
+    ```
+*   **Windows:**
+    ```bash
+    python pinger.py
+    ```
+
 ---
 
 ## 🇮🇷 راهنمای فارسی
 
-### ⚡ اجرای سریع (بدون نیاز به دانلود)
-شما می‌توانید بدون دانلود کردن فایل، تنها با یک دستور اسکریپت را مستقیماً از گیت‌هاب اجرا کنید.
+### 📥 ۱. دانلود و ذخیره‌سازی
+برای دانلود اسکریپت و ذخیره آن در سرور یا کامپیوتر خود، دستور زیر را اجرا کنید. این کار فایل `pinger.py` را دانلود می‌کند تا بتوانید آن را ویرایش کنید.
 
-**لینوکس / مک (Terminal):**
+**لینوکس / مک (ترمینال):**
 ```bash
-curl -sL https://raw.githubusercontent.com/AmirHBuilds/pinger/main/pinger.py | python3
+curl -o pinger.py https://raw.githubusercontent.com/AmirHBuilds/pinger/refs/heads/main/pinger.py
 ```
 
-**ویندوز (PowerShell):**
+**ویندوز (پاورشل):**
 ```powershell
-irm https://raw.githubusercontent.com/AmirHBuilds/pinger/main/pinger.py | python
+iwr -Uri https://raw.githubusercontent.com/AmirHBuilds/pinger/refs/heads/main/pinger.py -OutFile pinger.py
 ```
 
----
+### ⚙️ ۲. تنظیمات و ویرایش
+برای اضافه کردن سرورهای خودتان، فایل `pinger.py` را با هر ویرایشگر متنی (مانند nano یا Notepad) باز کنید و بخش `SERVER_GROUPS` را در بالای فایل تغییر دهید:
 
-### 📥 روش دستی (کپی و اجرا)
-اگر می‌خواهید فایل را ذخیره کنید یا لیست سرورها را تغییر دهید:
+```python
+SERVER_GROUPS = {
+    "1": {
+        "name": "سرورهای شخصی من",
+        "hosts": ["1.1.1.1", "google.com"]
+    }
+}
+```
 
-۱. **دانلود:**
-   *   کد را از [اینجا (pinger.py)](https://github.com/AmirHBuilds/pinger/blob/main/pinger.py) کپی کنید.
-   *   آن را در فایلی به نام `pinger.py` در سرور یا کامپیوتر خود ذخیره کنید.
+### 🚀 ۳. نحوه اجرا
+پس از دانلود، می‌توانید هر زمان که بخواهید اسکریپت را با دستور زیر اجرا کنید:
 
-۲. **اجرا:**
-   ترمینال یا CMD را در پوشه‌ای که فایل را ذخیره کردید باز کنید.
-
-   *   **در ویندوز:**
-       ```bash
-       python pinger.py
-       ```
-   *   **در لینوکس / مک:**
-       ```bash
-       python3 pinger.py
-       ```
-
-### ⚙️ تنظیمات شخصی
-برای تغییر لیست سرورها، فایل `pinger.py` را با هر ویرایشگر متنی باز کنید و بخش `SERVER_GROUPS` را در بالای کد ویرایش کنید.
+*   **در لینوکس / مک:**
+    ```bash
+    python3 pinger.py
+    ```
+*   **در ویندوز:**
+    ```bash
+    python pinger.py
+    ```
